@@ -28,10 +28,10 @@ const App = () => {
     <div className="App">
       {user.map((user) => (
         <div
-          className="h-screen dark:bg-gray-700 bg-gray-200 pt-12"
+          className="h-screen text-white bg-gray-700 bg-gray-200 pt-12"
           key={user?.id?.value}
         >
-          <div className="max-w-sm mx-auto bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+          <div className="max-w-sm mx-auto bg-white bg-gray-900 rounded-lg overflow-hidden shadow-lg">
             {isLoading ? (
               <div className="px-4 pb-6 animate-pulse">
                 <div className="text-center my-3">
@@ -47,7 +47,7 @@ const App = () => {
                 </div>
                 <div className="flex gap-2 px-2">
                   <button
-                    className="flex-1 rounded-full border-2 border-gray-400 dark:border-gray-700 font-semibold text-black dark:text-white px-4 py-2"
+                    className="flex-1 rounded-full border-2 border-gray-400 border-gray-700 font-semibold text-white px-4 py-2"
                     disabled
                   >
                     Processing...
@@ -58,15 +58,15 @@ const App = () => {
               <div className="px-4 pb-6">
                 <div className="text-center my-4">
                   <img
-                    className="h-32 w-32 rounded-full border-4 border-white dark:border-gray-800 mx-auto my-4"
+                    className="h-32 w-32 rounded-full border-4 border-white border-gray-800 mx-auto my-4"
                     src={user?.picture?.large}
                     alt={`${user?.name?.first} ${user?.name?.last}`}
                   />
                   <div className="py-2">
-                    <h3 className="font-bold text-2xl text-gray-800 dark:text-white mb-1">
+                    <h3 className="font-bold text-2xl text-gray-800 text-white mb-1">
                       {user?.name?.first} {user?.name?.last}
                     </h3>
-                    <div className="inline-flex text-gray-700 dark:text-gray-300 items-center">
+                    <div className="inline-flex text-gray-700 text-gray-300 items-center">
                       {user?.email}
                     </div>
                   </div>
@@ -76,7 +76,7 @@ const App = () => {
                     onClick={() => {
                       getRandomUser();
                     }}
-                    className="flex-1 rounded-full border-2 border-gray-400 dark:border-gray-700 font-semibold text-black dark:text-white px-4 py-2"
+                    className="flex-1 rounded-full border-2 border-gray-400 border-gray-700 font-semibold text-black text-white px-4 py-2"
                   >
                     Refresh
                   </button>
